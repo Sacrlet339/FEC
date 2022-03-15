@@ -1,0 +1,52 @@
+*, body{
+    font-family: 'Suez One', serif;
+}
+.navbar-nav li.nav-item > a.nav-link{
+    font-family: 'Suez One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #111111;
+}
+.navbar-nav li.nav-item > a.nav-link:hover, .navbar-nav li.nav-item > a.nav-link.active{
+   color:#00A2FF;
+}
+.btn{
+    color:#00A2FF;
+    background-color: transparent;
+    border: 0;
+    font-family: 'Suez One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1% 2.2%;
+    border: 3px solid transparent;
+}
+.btn:hover, .btn:focus{
+    border: 3px solid #00A2FF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+    color:#00A2FF;
+}
+.fa-solid{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #828282;
+}
+#mainBody{    
+    top:87px;
+    height: fit-content;
+}
+.EAEAEA{
+    /* adds this specific background color */
+background: #EAEAEA;
+position: relative;
+}
