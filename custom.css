@@ -160,3 +160,6 @@ li.select2-selection__choice >button.select2-selection__choice__remove:hover{
     height: 15px;
     margin-right: 5px;
 }
+.text-primary{
+    color: #00a2ff !important;;
+}
