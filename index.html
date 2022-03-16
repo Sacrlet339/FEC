@@ -20,11 +20,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Suez+One&display=swap" rel="stylesheet">
 
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         <title>FEC</title>
       </head>
       <body>
         <div class="container-fliud">
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light border">
                 <div class="container-fluid py-2 px-4">
                   <a class="navbar-brand" href="#"><img src="img/Logo.svg"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,43 +55,88 @@
                         <i class="fa-solid fa-heart mx-2"></i>
                         <i class="fa-solid fa-tag mx-2"></i>
                     </span>
-                    <button class="btn btn-outline-primary px-1 mx-2">Sign Up</button>
-                    <button class="btn btn-outline-primary px-1 mx-2">Login</button>
+                    <button class="btn btn-primary px-4 py-2 mx-2">Sign Up</button>
+                    <button class="btn btn-outline-primary px-4 py-2 mx-2">Login</button>
                   </div>
                 </div>
             </nav>
             <div class="position-absolute w-100" id="mainBody">
                 <div class="container-fliud grey-bg d-flex justify-content-between align-items-center py-2">
-                    <div class="container w-50 offset-sm-1 text-secondary">Adventure is just around the corner!</div>
+                    <div class="container w-50 offset-sm-1 text-secondary suez-one text-uppercase">Adventure is just around the corner!</div>
                     <div class="d-flex justify-content-md-end w-50 align-items-center px-5">
                         <button class="btn btn-outline-primary me-3">FIND A STORE</button>
-                        <p class="text-end text-secondary mx-0 mb-lg-0">Not in South Africa?</p>
+                        <p class="text-end text-secondary mx-0 mb-lg-0 suez-one text-uppercase">Not in South Africa?</p>
                     </div>
                 </div>
                 <div class="container-fliud d-flex py-4">
-                    <div class="w-25 border border-primary d-flex flex-column">
-                        <div class="blue-bg me-2 d-flex justify-content-start px-2">
-                            <button clas="btn pt-sans-font me-5"><i class="fa-solid fa-angle-left"></i></button>
-                            <div class="d-flex flex-column">
-                                <p class="fw-lighter mb-lg-0 pt-sans-font"> Hide</p>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                    <button class="btn btn-outline-secondary pt-sans-font" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                  </div>
+                    <div class="w-25 d-flex flex-column">
+                        <div class="px-3 me-2">
+                            <div class="blue-bg d-flex justify-content-start">
+                                <button type="button" class="btn btn-link pt-sans-font"><i class="fa-solid fa-angle-left"></i></button>
+                                <div class="d-flex flex-column py-2">
+                                    <p class="fw-lighter mb-lg-0 pt-sans-font px-3"> Hide</p>
+                                    <div class="input-group mb-lg-0">
+                                        <input type="text" class="form-control search-input suez-one" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary pt-sans-font search-icon" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="border border-primary border-2 d-flex flex-column py-3 px-4 mb-4">
+                                <div class="form-group mb-4">
+                                    <label class="px-2 pb-2 pt-sans-font fw-bold text-uppercase text-black-25">Brands</label>
+                                        <select class="form-select" multiple id='brands'>
+                                            <option value="Superbalist" selected>Superbalist</option>
+                                            <option value="Mango" selected>Mango</option>
+                                            <option value="Shien">Shien</option>
+                                            <option value="prada">prada</option>
+                                            <option value="Nike">Nike</option>
+                                        </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="px-2 pb-2 pt-sans-font fw-bold text-uppercase text-black-25">Color</label>
+                                        <select class="form-select pt-sans-font fw-bold text-uppercase text-black-25">
+                                            <option value="" selected>Select Color</option>
+                                            <option>Black</option>
+                                            <option>Red</option>
+                                            <option>Blue</option>
+                                            <option>Green</option>
+                                        </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="px-2 pb-2 pt-sans-font fw-bold text-uppercase text-black-25">pricing</label>
+                                    <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                                </div>
+                                <div class="form-group mb-4 d-flex align-items-center justify-content-center">
+                                    <button class="btn btn-primary btn-solid py-3 px-4 rounded-0 fs-2"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="py-4 px-4"><img src="img/Advert Banner.png"></div>
+                        <div class="py-4 px-5"><img src="img/Advert Banner.png"></div>
+                        <div class="mt-3 blue-bg mx-3 py-2 px-2">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close btn-close-white text-end" aria-label="Close"></button>
+                            </div>
+                            <div class="d-flex justify-content-center"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="d-flex justify-content-center py-2 fs-2"><p class="text-uppercase suez-one">Sign up to our mailing list!</p></div>
+                            <div class="mb-3">
+                                <label class="px-2 text-uppercase pt-sans-font">Email</label>
+                                <input type="email" class="form-control pt-sans-font fw-bold text-uppercase text-black-25" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group mb-4 d-flex align-items-center justify-content-center">
+                                <button class="btn btn-light rounded-0 py-3 px-4 text-uppercase suez-one fs-2">Submit</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="w-75 border py-3 px-3">
                         <div  class="w-100"><img src="img/Top Banner.png"></div>
-                        <div>
+                        <div class="py-5 border border-danger">
                             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                                 <ol class="breadcrumb pt-sans-font">
                                   <li class="breadcrumb-item pt-sans-font">Home</li>
                                   <li class="breadcrumb-item pt-sans-font">Boots</li>
                                   <li class="breadcrumb-item pt-sans-font active" aria-current="page">Dylan Hiker Boots</li>
                                 </ol>
-                              </nav>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -95,4 +144,11 @@
 
           </div>
       </body>
+<script>
+        $(document).ready(function(){
+
+          // Initialize select2
+          $("#brands").select2();
+        });
+</script>
 </html>
