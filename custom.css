@@ -179,6 +179,10 @@ li.select2-selection__choice >button.select2-selection__choice__remove:hover{
     border: 4px solid #00A2FF;
     background-color: #EAEAEA;
 }
+.hover-affect:hover label.text-black, .hover-affect:hover div.text-darkgrey{
+    color:#00A2FF !important;
+}
+
 .text-darkgrey{
     color: #828282;
 }
