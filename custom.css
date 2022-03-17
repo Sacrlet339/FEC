@@ -190,3 +190,11 @@ a:hover{
     color: #ffffff;
     text-decoration:underline;
 }
+.carousel-indicators > button{
+    width: 96px !important;
+    height: 96px !important;
+    display: flex !important;
+}
+.carousel-indicators > button.active{
+    border: 2px solid #00A2FF;
+}
